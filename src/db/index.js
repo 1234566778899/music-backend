@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 require('dotenv').config();
-mongoose.connect('mongodb+srv://victor:1234556@cluster0.iyqbg9l.mongodb.net/music', {
+mongoose.connect('mongodb+srv://victor:1234556@cluster0.iyqbg9l.mongodb.net/musicdb', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(db => console.log('db connected'))

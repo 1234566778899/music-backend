@@ -3,10 +3,12 @@ const User = require("../db/Schemas/User");
 // Registrar un nuevo usuario
 const register = async (req, res) => {
     try {
+        console.log(req.body)
         const newUser = new User(req.body);
         await newUser.save();
         return res.status(201).json({ ok: 'Usuario registrado exitosamente', user: newUser });
     } catch (error) {
+        console.log(error)
         return res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
